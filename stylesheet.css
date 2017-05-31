@@ -1,0 +1,360 @@
+/*GENERAL DATA*/
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+
+
+@font-face {
+    font-family: 'Regular';
+    src:
+        url('fonts/AdventPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'Thin';
+    src:
+        url('fonts/AdventPro-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'SemiBold';
+    src:
+        url('fonts/AdventPro-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'arialregular';
+    src: url('fonts/arial-webfont.eot');
+    src: url('fonts/arial-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/arial-webfont.woff2') format('woff2'),
+         url('fonts/arial-webfont.woff') format('woff'),
+         url('fonts/arial-webfont.ttf') format('truetype'),
+         url('fonts/arial-webfont.svg#arialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a:visited, li:visited, a:focus{
+  text-decoration: none !important;
+}
+ul{
+  list-style: none;}
+
+
+
+*{ margin: 0; padding: 0;}
+
+body{
+	background-image: url("img/header.png");
+	background-size: cover;
+	margin: 0 !important; padding: 0 !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+  font-family: "Regular" !important;
+
+	/*background-attachment: fixed;*/
+
+}
+
+button{
+  outline: none;
+}
+
+.cover{
+  height: 100vh;
+}
+
+#center-cover{
+  background-color: rgba(0,0,0,.7);
+}
+
+.cover button{
+  background-color: #108765;
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  margin:10px;
+}
+
+.cover button:hover{
+    background-color: #0B4734;
+}
+
+#contact .button-social:hover {
+  color:#0B4734;
+  background-color: white;
+  transition: 1s all;
+}
+
+#contact .button-social:hover a i{
+  color:#0B4734;
+  transition: .7s all;
+}
+
+.float-box{
+position: absolute;
+bottom: 0;
+}
+
+.cover-right .float-box{
+  left: 0;
+}
+
+.cover-left .float-box{
+  right: 0;
+}
+
+
+#foto-perfil{
+  border-radius: 100%;
+  border: 6px solid rgba(16,135,101, .5);
+  max-width: 35%;
+  /*position: absolute;*/
+    display: inherit;
+    margin: 30px auto;
+}
+
+.container-info{
+  color: white;
+  text-align: center;
+}
+
+.container-info .linea-divisoria{
+  height: 1px;
+  background-color: white;
+  width: 150px;
+  margin: 40px auto;
+}
+
+.container-info i{
+  color: white;
+}
+
+#about-me h1 span{
+  color:rgba(16,135,101,1);
+}
+
+#about-me h1{
+  font-family: 'SemiBold';
+}
+
+#about-me h2{
+  color: #c1c1c1;
+  font-size: 1.5em;
+}
+
+#about-me p{
+  font-family: 'Thin';
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#contact p{
+  font-size: 1.5em;
+}
+#contact .button-social{
+  background-color: rgba(16,135,101,1);
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 5px;
+  margin: 20px;
+}
+
+.button-social i{
+  font-size: 3em;
+}
+
+#skills, #work, #contact{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10%;
+}
+
+
+
+ #work ul li span{
+  color: rgba(16,135,101,1);
+}
+
+#skills ul li i, #work ul li i{
+  font-size: 10px;
+  margin-right: 5px;
+  color: rgba(16,135,101,1);
+}
+
+#skills{
+  text-align: left;
+}
+
+#skills ul{
+  padding-left: 10%;
+}
+
+
+
+/*menu mobile*/
+
+#toggle {
+display: block;
+width: 28px;
+height: 30px;
+margin: 30px auto 10px;
+}
+
+#toggle span:after,
+#toggle span:before {
+content: "";
+position: absolute;
+left: 0;
+top: -9px;
+}
+#toggle span:after{
+top: 9px;
+}
+#toggle span {
+position: relative;
+display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+width: 100%;
+height: 5px;
+background-color: rgba(16,135,101,1);;
+transition: all 0.3s;
+backface-visibility: hidden;
+border-radius: 2px;
+}
+
+#toggle.on span {
+background-color: transparent;
+}
+#toggle.on span:before {
+transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+opacity: 1;
+visibility: visible;
+}
+
+
+#menu {
+position: absolute;
+left: 0;
+right: 0;
+color: black;
+width: 90%;
+
+margin: auto;
+text-align: center;
+border-radius: 4px;
+background:white;
+box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+opacity: 0;
+visibility: hidden;
+transition: opacity .4s;
+}
+#menu:after {
+position: absolute;
+top: -15px;
+left: 46%;
+content: "";
+display: block;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+border-bottom: 20px solid white;
+z-index: -1;
+}
+#menu ul, #menu  li{
+list-style: none;
+display: block;
+margin: 0;
+padding: 0;
+}
+#menu li{
+padding: 5px;
+color: rgba(16,135,101,1);
+text-decoration: none;
+transition: all .2s;
+}
+#menu li:hover,
+#menu li:focus {
+background: rgba(16,135,101,1);
+color: #fff;
+}
+
+/*menu mobile*/
+
+
+
+
+/*MEDIA QUERY PARA MOBILE LANDSCAPE*/
+
+@media screen and (max-width: 767px) and (orientation : landscape) {
+
+    #foto-perfil{
+      max-width: 20% !important;
+    }
+
+    body{
+      background-size:  auto;
+    }
+
+
+}
+
+
+
+/*MEDIA QUERY PARA MOBILE*/
+
+@media screen and (max-width: 767px){
+
+  #foto-perfil{
+    max-width: 40%;
+  }
+
+  #about-me h1{
+    font-size: 2em;
+  }
+
+  #about-me h2{
+    font-size: 1.3em;
+  }
+
+  #skills ul{
+    padding-left: 0;
+  }
+
+  #skills, #work, #contact{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10%;
+  }
+
+  #about-me p{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+
+
+/*TERMINA MEDIA QUERY MOBILE*/
+}
