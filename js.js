@@ -8,6 +8,8 @@ $( window ).resize(function() {
 });
 
 $(document).on("ready",function(){
+
+  size();
 slider();
 menu();
 
@@ -88,3 +90,34 @@ $(".change-content").click(function(){
              return false;
           }
   }
+
+
+function size(){
+
+  console.log("1");
+  doc = $(document).height();
+  win = $(window).height();
+  // body = $(body).height();
+  cover = $("#center-cover").height();
+
+  var body = document.body,
+      html = document.documentElement;
+
+      offset=html.offsetHeight;
+
+      console.log(offset);
+
+
+  console.log(doc+"  "+win +"  "+cover);
+
+    if(doc>win ){
+        $(".cover").css("height", 'auto');
+
+    }else if(cover<win){
+      $(".cover").css("min-height", '100vh');
+      // $(".cover").css("height", win+cover+"px");
+
+
+    }
+
+}

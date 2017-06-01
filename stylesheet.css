@@ -40,6 +40,10 @@
     font-style: normal;
 }
 
+html{
+  /*height: 100%;*/
+}
+
 
 a:visited, li:visited, a:focus{
   text-decoration: none !important;
@@ -57,8 +61,9 @@ body{
 	margin: 0 !important; padding: 0 !important;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 100%;
   font-family: "Regular" !important;
+  background-color: black;
+
 
 	/*background-attachment: fixed;*/
 
@@ -307,7 +312,7 @@ color: #fff;
 
 /*MEDIA QUERY PARA MOBILE LANDSCAPE*/
 
-@media screen and (max-width: 767px) and (orientation : landscape) {
+@media screen and (max-width: 960px) and (orientation : landscape) {
 
     #foto-perfil{
       max-width: 20% !important;
@@ -315,6 +320,10 @@ color: #fff;
 
     body{
       background-size:  auto;
+    }
+
+    .cover{
+      height: auto;
     }
 
 
@@ -326,8 +335,18 @@ color: #fff;
 
 @media screen and (max-width: 767px){
 
+
+
+  body{
+    background-size: auto 100%;
+  }
+
   #foto-perfil{
     max-width: 40%;
+  }
+
+  #about-me{
+    padding-bottom: 30px;
   }
 
   #about-me h1{
@@ -357,4 +376,33 @@ color: #fff;
 
 
 /*TERMINA MEDIA QUERY MOBILE*/
+}
+
+
+@media screen and (max-width: 360px){
+  .cover{
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+
+@media screen and (min-width: 360px) and (min-height:640px){
+  .cover{
+    height: auto;
+    min-height: auto;
+  }
+}
+
+@media screen and (width: 640px) and (height:360px){
+  .cover{
+    height: auto;
+
+  }
+
+  body{
+    background-size: auto;
+  }
+
+
 }
